@@ -9,3 +9,7 @@ Route::get('/user', function (Request $request) {
 })->middleware('auth:sanctum');
 
 Route::post('/tarefa', [TarefaController::class, 'store']);
+
+Route::get('/tarefa/{id}/find',[TarefaController::class, 'findById']);
+
+Route::get('/tarefa',[TarefaController::class, 'index']);
